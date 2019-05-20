@@ -1,9 +1,9 @@
-exports.Letter = function (character) {
+function Letter(character) {
     // a string value to store the underlying character for the letter
     this.character = character;
     // a boolean value that stores whether underlying has been guessed yet
     this.guessed = false;
-    this.display = function () {
+    this.toString = function () {
         // a function that returns underlying if guessed is true...or an underscore if guessed is false
 
         if (this.character === ' ') {
@@ -11,9 +11,11 @@ exports.Letter = function (character) {
             return ' ';
         } else if (!this.guessed){
             // return underscore if it was not guessed correctly
+            console.log('_');
             return '_';
         }else {
             // return the underlying character because it was guessed correctly
+            console.log(this.character);
             return this.character;
         };
 
@@ -25,3 +27,5 @@ exports.Letter = function (character) {
         // takes a character as an arg and checks against underlying... if it is equal to underlying..update guessed accordingly
     };
 };
+
+module.exports = Letter;
