@@ -9,23 +9,21 @@ function Letter(character) {
         if (this.character === ' ') {
             // return space if word has space
             return ' ';
-        } else if (!this.guessed){
+        } else if (!this.guessed) {
             // return underscore if it was not guessed correctly
             console.log('_');
             return '_';
-        }else {
+        } else {
             // return the underlying character because it was guessed correctly
             console.log(this.character);
             return this.character;
         };
-
     };
     this.check = function (guess) {
-        if (guess === this.character){
+        if (guess === this.character) {
             this.guessed = true;
-        }
+        };
         // takes a character as an arg and checks against underlying... if it is equal to underlying..update guessed accordingly
     };
 };
-
 module.exports = Letter;
