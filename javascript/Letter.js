@@ -11,12 +11,10 @@ function Letter(character) {
             return ' ';
         } else if (!this.guessed) {
             // return underscore if it was not guessed correctly
-            console.log('_');
             return '_';
         } else {
             // return the underlying character because it was guessed correctly
             console.log(this.character);
-            return this.character;
         };
     };
     this.check = function (guess) {
