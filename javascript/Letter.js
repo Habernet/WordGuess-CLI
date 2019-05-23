@@ -14,7 +14,7 @@ function Letter(character) {
             return '_';
         } else {
             // return the underlying character because it was guessed correctly
-            console.log(this.character);
+            return this.character;
         };
     };
     this.check = function (guess) {
